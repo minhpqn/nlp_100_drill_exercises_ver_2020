@@ -24,7 +24,6 @@
 import argparse
 import re
 
-
 __version__ = '1.7.1'
 
 VALIDS = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-&'
@@ -118,7 +117,11 @@ def tag_and_collect(lines, id_tag=True, back_links=False, exclude_h=None):
         saw_headline = False
 
         orig_len = len(l)
-        l = l.lstrip()
+        l_ = l.lstrip()
+        if l_.startswith(('# ', '## ', '### ', '#### ', '##### ', '###### ')):
+            l = l_
+        else:
+            pass
 
         if l.startswith(('# ', '## ', '### ', '#### ', '##### ', '###### ')):
 
