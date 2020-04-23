@@ -1,7 +1,6 @@
 # Table of Contents
 - [Chương 1: Bài tập khởi động](#ch-ng-1-b-i-t-p-kh-i-ng)
 - [Chương 2: Các lệnh cơ bản trên môi trường UNIX](#ch-ng-2-c-c-l-nh-c-b-n-tr-n-m-i-tr-ng-unix)
-- [14. Trích xuất ra N hàng đầu tiên của file](#14-tr-ch-xu-t-ra-n-h-ng-u-ti-n-c-a-file)
 
 100 bài luyện tập xử lý ngôn ngữ tự nhiên phiên bản 2020
 ========================================================
@@ -100,6 +99,6 @@ và `col2.txt`. Thử thực hiện công việc với lệnh `cut` trong unix.
 Kết hợp nội dung trong 2 file `col1.txt` và `col2.txt` đã được tạo ra trong bài 12 để tạo thành một file mới có
 nội dung giống gồm cột 1 và cột 2 trong file ban đầu và các cột cách nhau bởi ký tự tab. Sử dụng lệnh paste để thực hiện bài tập và xác nhận kết quả của chương trình bạn viết.
 
-## 14. Trích xuất ra N hàng đầu tiên của file
+### 14. Trích xuất ra N hàng đầu tiên của file
 
 Viết chương trình trích xuất ra *N* hàng đầu tiên của file. Biến số dòng lệnh là số tự nhiên *N*. Sử dụng lệnh head trong unix để thực hiện công việc.
