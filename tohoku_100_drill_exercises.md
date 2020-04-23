@@ -71,3 +71,31 @@ space.
 Cho trước một câu tiếng Anh hợp lệ, ví dụ "I couldn't believe that I could actually understand what I
 was reading : the phenomenal power of the human mind .", chạy chương trình đã
 viết để đưa ra kết quả.
+
+## Chương 2: Các lệnh cơ bản trên môi trường UNIX
+
+Tệp [popular-names.txt](https://nlp100.github.io/data/popular-names.txt) là một tệp ở định dạng phân cách bằng dấu tab, lưu trữ "tên", "giới tính", "số người" và "năm sinh" của các em bé được sinh ra ở Hoa Kỳ. Viết chương trình thực hiện các xử lý sau đây. Tệp [popular-names.txt](https://nlp100.github.io/data/popular-names.txt) là đầu vào của của chương trình. Sau đó, chỉ dùng cách lệnh trong UNIX để thực hiện cùng các nhiệm vụ và xác nhận xem kết quả các lệnh UNIX đưa ra có giống với kết quả của chương trình bạn viết hay không.
+
+### 10. Đếm số dòng trong file
+
+Đếm số dòng trong file. Xác nhận kết quả bằng lệnh wc trong unix.
+
+### 11. Biến đổi các ký tự tab thành space
+
+Chuyễn mỗi ký tự tab thành ký tự space. Xác nhận kết quả bằng các lệnh
+`sed`, `tr` hoặc `expand`.
+
+### 12. Lưu cột 1 vào file col1.txt, cột 2 vào file col2.txt
+
+Trích xuất nội dung trong cột 1, cột 2 của các dòng trong file và lưu vào các file tương ứng: `col1.txt`
+và `col2.txt`. Thử thực hiện công việc với lệnh `cut` trong unix.
+
+### 13．Trộn hai file col1.txt và col2.txt
+
+Kết hợp nội dung trong 2 file `col1.txt` và `col2.txt` đã được tạo ra trong bài 12 để tạo thành một file mới có
+nội dung giống gồm cột 1 và cột 2 trong file ban đầu và các cột cách nhau bởi ký tự tab. Sử dụng lệnh paste để thực hiện bài tập và xác nhận kết quả của chương trình bạn viết.
+
+## 14. Trích xuất ra N hàng đầu tiên của file
+
+Viết chương trình trích xuất ra *N* hàng đầu tiên của file. Biến số dòng lệnh là số tự nhiên *N*. Sử dụng lệnh head trong unix để thực hiện công việc.
+
