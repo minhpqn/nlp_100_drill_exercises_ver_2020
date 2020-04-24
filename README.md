@@ -82,7 +82,7 @@ Tệp [popular-names.txt](https://nlp100.github.io/data/popular-names.txt) là m
 
 ### 10. Đếm số dòng trong file
 
-Đếm số dòng trong file. Xác nhận kết quả bằng lệnh wc trong unix.
+Đếm số dòng trong file. Xác nhận kết quả bằng lệnh `wc` trong unix.
 
 ### 11. Biến đổi các ký tự tab thành space
 
@@ -97,8 +97,30 @@ và `col2.txt`. Thử thực hiện công việc với lệnh `cut` trong unix.
 ### 13．Trộn hai file col1.txt và col2.txt
 
 Kết hợp nội dung trong 2 file `col1.txt` và `col2.txt` đã được tạo ra trong bài 12 để tạo thành một file mới có
-nội dung giống gồm cột 1 và cột 2 trong file ban đầu và các cột cách nhau bởi ký tự tab. Sử dụng lệnh paste để thực hiện bài tập và xác nhận kết quả của chương trình bạn viết.
+nội dung giống gồm cột 1 và cột 2 trong file ban đầu và các cột cách nhau bởi ký tự tab. Sử dụng lệnh `paste` để thực hiện bài tập và xác nhận kết quả của chương trình bạn viết.
 
 ### 14. Trích xuất ra N hàng đầu tiên của file
 
-Viết chương trình trích xuất ra *N* hàng đầu tiên của file. Biến số dòng lệnh là số tự nhiên *N*. Sử dụng lệnh head trong unix để thực hiện công việc.
+Viết chương trình trích xuất ra *N* hàng đầu tiên của file. Biến số dòng lệnh là số tự nhiên *N*. Sử dụng lệnh `head` trong unix để thực hiện công việc.
+
+### 15. Trích xuất ra N hàng cuối cùng của file
+
+Viết chương trình trích xuất ra *N* hàng cuối cùng của file. Chương trình nhận đầu vào từ dòng lệnh là số tự nhiên *N*. Sử dụng lệnh `tail` trong unix để thực hiện công việc.
+
+### 16. Chia file thành N phần
+
+Nhận một số tự nhiên *N* từ đối số của dòng lệnh và chia file đầu vào thành *N* phần tại các ranh giới của các dòng (line boundaries). Xác nhận lại kết quả bằng lệnh `split` trong UNIX.
+
+### 17. Các xâu phân biệt trong cột đầu tiên
+
+Tìm các xâu phân biệt (một tập hợp các xâu) của cột đầu tiên của file. Xác nhận lại kết quả bằng cách dùng lệnh `cut`, `sort` và `uniq`.
+
+### 18. Sắp xếp các dòng theo thứ tự tăng dần của cột thứ 3
+
+Sắp xếp các dòng theo thứ tự tăng dần của các số trong cột thứ 3 (sắp xếp các dòng nhưng không thay đổi nội dung của trong mỗi dòng). Xác nhận lại kết quả với lệnh `sort`.
+
+### 19. Sắp xếp theo tần suất xuất hiện
+
+Đưa ra tần suất xuất hiện của các giá trị trong cột 1; sắp xếp các giá trị trong
+cột 1 theo thứ tự từ cao đến thấp của tần suất xuất hiện.Xác nhận lại kết quả bằng việc dùng các lệnh `cut`,
+`uniq`, `sort`.
