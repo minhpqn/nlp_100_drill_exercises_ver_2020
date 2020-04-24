@@ -1,3 +1,5 @@
+<a class="mk-toclify" id="table-of-contents"></a>
+
 # Table of Contents
 - [Chương 1: Bài tập khởi động](#ch-ng-1-b-i-t-p-kh-i-ng)
 - [Chương 2: Các lệnh cơ bản trên môi trường UNIX](#ch-ng-2-c-c-l-nh-c-b-n-tr-n-m-i-tr-ng-unix)
@@ -8,6 +10,7 @@
 Dịch từ tài liệu [言語処理100本ノック 2020](<https://nlp100.github.io/ja>) của lab Inui-Okazaki, đại học Tohoku, Nhật Bản. Người dịch: Phạm Quang Nhật Minh
 (minhpqn).
 
+<a class="mk-toclify" id="ch-ng-1-b-i-t-p-kh-i-ng"></a>
 ## Chương 1: Bài tập khởi động
 
 ### 00. Đảo ngược xâu ký tự
@@ -76,13 +79,14 @@ Cho trước một câu tiếng Anh hợp lệ, ví dụ "I couldn't believe tha
 was reading : the phenomenal power of the human mind .", chạy chương trình đã
 viết để đưa ra kết quả.
 
+<a class="mk-toclify" id="ch-ng-2-c-c-l-nh-c-b-n-tr-n-m-i-tr-ng-unix"></a>
 ## Chương 2: Các lệnh cơ bản trên môi trường UNIX
 
 Tệp [popular-names.txt](https://nlp100.github.io/data/popular-names.txt) là một tệp ở định dạng phân cách bằng dấu tab, lưu trữ "tên", "giới tính", "số người" và "năm sinh" của các em bé được sinh ra ở Hoa Kỳ. Viết chương trình thực hiện các xử lý sau đây. Tệp [popular-names.txt](https://nlp100.github.io/data/popular-names.txt) là đầu vào của của chương trình. Sau đó, chỉ dùng cách lệnh trong UNIX để thực hiện cùng các nhiệm vụ và xác nhận xem kết quả các lệnh UNIX đưa ra có giống với kết quả của chương trình bạn viết hay không.
 
 ### 10. Đếm số dòng trong file
 
-Đếm số dòng trong file. Xác nhận kết quả bằng lệnh `wc` trong unix.
+Đếm số dòng trong file. Xác nhận kết quả bằng lệnh wc trong unix.
 
 ### 11. Biến đổi các ký tự tab thành space
 
