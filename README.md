@@ -3,6 +3,7 @@
 # Table of Contents
 - [Chương 1: Bài tập khởi động](#ch-ng-1-b-i-t-p-kh-i-ng)
 - [Chương 2: Các lệnh cơ bản trên môi trường UNIX](#ch-ng-2-c-c-l-nh-c-b-n-tr-n-m-i-tr-ng-unix)
+- [Chương 3: Biểu thức chính quy (Regular Expressions)](#ch-ng-3-bi-u-th-c-ch-nh-quy-regular-expressions)
 
 100 bài luyện tập xử lý ngôn ngữ tự nhiên phiên bản 2020
 ========================================================
@@ -128,3 +129,20 @@ Sắp xếp các dòng theo thứ tự tăng dần của các số trong cột t
 Đưa ra tần suất xuất hiện của các giá trị trong cột 1; sắp xếp các giá trị trong
 cột 1 theo thứ tự từ cao đến thấp của tần suất xuất hiện.Xác nhận lại kết quả bằng việc dùng các lệnh `cut`,
 `uniq`, `sort`.
+
+<a class="mk-toclify" id="ch-ng-3-bi-u-th-c-ch-nh-quy-regular-expressions"></a>
+## Chương 3: Biểu thức chính quy (Regular Expressions)
+
+Tệp [enwiki-country.json.gz](https://nlp100.github.io/data/enwiki-country.json.gz) lưu trữ các bài viết Wikipedia ở định dạng:
+
+- Mỗi dòng lưu trữ một bài viết Wikipedia ở định dạng JSON.
+- Mỗi tài liệu JSON có các cặp khóa-giá trị:
+    * Tiêu đề của bài viết là giá trị ứng với khóa "title".
+    * Phần nội dung của bài viết là giá trị ứng với khóa "text".
+- Toàn bộ tập tin được nén bởi gzip.
+
+Viết mã thực hiện các công việc sau.
+
+### 20. Đọc vào dữ liệu JSON
+
+Đọc các tài liệu JSON, trích xuất và hiển thị nội dung của bài viết về United Kingdom. Sử dụng các nội dung của tài liệu được trích xuất này để thực hiện các nhiệm vụ trong các bài tập từ 21-29.
