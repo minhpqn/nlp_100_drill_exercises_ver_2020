@@ -146,3 +146,43 @@ Viết mã thực hiện các công việc sau.
 ### 20. Đọc vào dữ liệu JSON
 
 Đọc các tài liệu JSON, trích xuất và hiển thị nội dung của bài viết về United Kingdom. Sử dụng các nội dung của tài liệu được trích xuất này để thực hiện các nhiệm vụ trong các bài tập từ 21-29.
+
+### 21. Trích xuất các dòng có chứa tên đề mục
+
+Trong các tài liệu, trích xuất các dòng có chứa tên đề mục (category name).
+
+### 22. Trích xuất các tên đề mục
+
+Trích xuất tên đề mục của trong các tài liệu. Trong bài tập này, cần trích xuất
+chính xác các tên đề mục chứ không phải dòng chứa tên đề mục.
+
+### 23. Cấu trúc của các Section
+
+Hiển thị tên của các section và level của các section trong các tài liệu
+Wikipedia (Ví dụ với section == Section Name ==" thì level bằng 1)
+
+### 24. Trích xuất các liên kết file
+
+Trích xuất toàn bộ các liên kết đến các media files trong tài liệu.
+
+### 25. Infobox
+
+Trích xuất tên trường và giá trị của chúng trong Infobox "country" và lưu trữ chúng trong một đối tượng từ điển (dictionary).
+
+### 26. Loại bỏ các emphasis markups
+
+Trong khi làm các xử lý ở bài tập 25, xoá các MediaWiki emphasis markup (italic, bold,
+both) trong giá trị của các trường và biến đổi thành plain text. Xem thêm tại [Help:Cheatsheet](https://en.wikipedia.org/wiki/Help:Cheatsheet).
+
+### 27. Xóa bỏ các Internal Links
+
+Bên cạnh những xử lý trong bài tập 26, hãy xóa những liên kết trong từ các giá trị của các trường. Xem thêm tại [Help:Cheatsheet](https://en.wikipedia.org/wiki/Help:Cheatsheet).
+
+### 28. Xoá các markup trong văn bản
+
+Ngoài các xử lý ở bài 27, hãy xoá các Media markup trong các giá trị của các trường ở Infobox càng nhiều càng tốt
+và in ra các thông tin cơ bản về quốc gia ở dạng plaintext.
+
+### 29. Lấy ra các URL của quốc kỳ
+
+Lấy URL của quốc gia bằng cách sử dụng kết quả phân tích của Infobox. (Gợi ý: chuyển đổi tham chiếu file thành URL bằng cách gọi [imageinfo](<https://www.mediawiki.org/wiki/API:Imageinfo>) trong [MediaWiki API](https://www.mediawiki.org/wiki/API:Main_page))
