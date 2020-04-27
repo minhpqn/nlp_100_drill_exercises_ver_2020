@@ -176,3 +176,25 @@ và in ra các thông tin cơ bản về quốc gia ở dạng plaintext.
 ### 29. Lấy ra các URL của quốc kỳ
 
 Lấy URL của quốc gia bằng cách sử dụng kết quả phân tích của Infobox. (Gợi ý: chuyển đổi tham chiếu file thành URL bằng cách gọi [imageinfo](<https://www.mediawiki.org/wiki/API:Imageinfo>) trong [MediaWiki API](https://www.mediawiki.org/wiki/API:Main_page))
+
+## Chương 4: Morphological Analysis trong tiếng Nhật (形態素解析)
+
+Dùng [MeCab](http://taku910.github.io/mecab) để phân tích hình thái cho nội dung text của cuốn tiểu thuyết "Tôi là một con mèo" ([neko.txt](https://nlp100.github.io/data/neko.txt)) tác giả Soseki Natsume, và lưu kết quả vào file neko.txt.mecab. Sử dụng file kết quả để thực hiện các công việc ở các bài tập dưới đây.
+
+Đối với các bài tập 37, 38, 39, có thể sử dụng các phần mềm
+[matplitlib](<http://matplotlib.org/>) hoặc
+[Gnuplot](<http://www.gnuplot.info/>).
+
+
+### 30. Đọc vào kết quả morphological analysis
+
+Viết chương trình đọc vào kết quả morphological analysis (file neko.txt.mecab).
+
+Yêu cầu: Với mỗi morpheme, lưu các thông tin: 表層形 (surface form), 基本形
+(base form), 品詞 (pos), 品詞細分類1 (pos1) bằng cấu trúc dữ liệu hash map với
+các key tương ứng là: surface, base, pos, pos1. Lưu trữ mỗi câu bằng danh sách
+của các morpheme. Trong các bài tập còn lại trong chương 4, hãy sử dụng cách tổ
+chức dữ liệu trong bài này.
+
+
+
