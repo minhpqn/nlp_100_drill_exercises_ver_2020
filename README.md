@@ -207,3 +207,39 @@ Yêu cầu: Với mỗi morpheme, lưu các thông tin: 表層形 (surface form)
 các key tương ứng là: surface, base, pos, pos1. Lưu trữ mỗi câu bằng danh sách
 của các morpheme. Trong các bài tập còn lại trong chương 4, hãy sử dụng cách tổ
 chức dữ liệu trong bài này.
+
+### 31. Động từ
+
+Trích xuất tất cả các surface forms của động từ (pos=動詞).
+
+### 32. Dạng nguyên thể của động từ (動詞の原形)
+
+Trích xuất tất cả dạng nguyên thể của động từ (base form).
+
+### 33.「AのB」
+
+Trích xuất tất cả các danh từ ghép (compound nouns) gồm 2 danh từ kết nối bằng の.
+
+### 34. Trích xuất các kết nối danh từ (noun connections hay 名詞の連接)
+
+Trích xuất tất cả các noun connections (các danh từ đứng cạnh nhau liên tiếp). Khi trích xuất, chú ý trích xuất chuỗi danh từ matching dài nhất có thể. Ví dụ ABC trong đó A, B, C là danh từ thì phải trích xuất ABC thay vì AB.
+
+### 35. Tần suất xuất hiện của từ
+
+Lập trình tính tần suất xuất hiện của từ trong văn bản. Đưa ra các từ theo thứ tự giảm dần của tần suất xuất hiện.
+
+### 36. Top 10 từ xuất hiện nhiều nhất
+
+Vẽ đồ thị (ví dụ bar graph) của tần suất xuất hiện của 10 từ xuất hiện nhiều nhất trong văn bản.
+
+### 37. Top 10 từ đồng xuất hiện với từ 猫
+
+Vẽ đồ thị (ví dụ: bar plot) tần suất xuất hiện của top 10 từ đồng xuất hiện nhiều nhất với từ 猫.
+
+### 38. Histogram
+
+Vẽ đồ thị histogram tần suất xuất hiện của các từ. Trục ngang là tần suất xuất hiện. Trục dọc là các từ.
+
+### 39. Luật Zipf
+
+Vẽ đồ thị với trục ngang là rank của các từ theo tần suất xuất hiện (cao đến thấp), trục dọc là tần suất xuất hiện của các từ. Vẽ đồ thị [log-log](https://en.wikipedia.org/wiki/Log%E2%80%93log_plot) để thể hiện.
