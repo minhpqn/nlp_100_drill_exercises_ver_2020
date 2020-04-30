@@ -5,6 +5,7 @@
 - [Chương 2: Các lệnh cơ bản trên môi trường UNIX](#ch-ng-2-c-c-l-nh-c-b-n-tr-n-m-i-tr-ng-unix)
 - [Chương 3: Biểu thức chính quy (Regular Expressions)](#ch-ng-3-bi-u-th-c-ch-nh-quy-regular-expressions)
 - [Chương 4: Morphological Analysis trong tiếng Nhật (形態素解析)](#ch-ng-4-morphological-analysis-trong-ti-ng-nh-t)
+- [Chương 5: Dependency parsing (係り受け解析)](#ch-ng-5-dependency-parsing)
 
 100 bài luyện tập xử lý ngôn ngữ tự nhiên phiên bản 2020
 ========================================================
@@ -243,3 +244,80 @@ Vẽ đồ thị histogram tần suất xuất hiện của các từ. Trục ng
 ### 39. Luật Zipf
 
 Vẽ đồ thị với trục ngang là rank của các từ theo tần suất xuất hiện (cao đến thấp), trục dọc là tần suất xuất hiện của các từ. Vẽ đồ thị [log-log](https://en.wikipedia.org/wiki/Log%E2%80%93log_plot) để thể hiện.
+
+<a class="mk-toclify" id="ch-ng-5-dependency-parsing"></a>
+## Chương 5: Dependency parsing (係り受け解析)
+
+Thực hiện phân tích cấu trúc ngữ pháp (dependency parsing) bằng công cụ
+[CaboCha](<http://taku910.github.io/cabocha/>) cho file
+[neko.txt](https://nlp100.github.io/data/neko.txt) và lưu kết
+quả vào file neko.txt.cabocha. Sử dụng file kết quả này làm đầu vào cho các bài
+tập dưới đây.
+
+### 40. Đọc vào kết quả dependency parsing (theo morphemes)
+
+Cài đặt lớp Morph cho các morphemes. Lớp này có các biến thành phần (member
+variables) là surface (cho surface forms của morphems), base (cho base form),
+pos (cho POS tag), pos1 (cho detailed POS tag - 品詞細分類). Sau đó đọc vào kết
+quả phân tích dependency parsing trong file neko.txt.cabocha. Mỗi câu sẽ bao gồm
+một danh sách các Morph objects. Hiển thị danh sách các morphemes cho câu thứ 3
+trong văn bản.
+
+### 41. Đọc vào kết quả dependency parsing (theo chunks và depedency relations)
+
+Tiếp theo bài 40, cài đặt lớp Chunk để lưu trữ các chunk (hay bunsetsu (文節)).
+Lớp này có các biến thành phần là:
+
+- morphs (để lưu trữ danh sách các Morph
+objects)
+- dst để lưu trữ index của chunk mà chunk hiện tại trỏ đến (chunk đích - destination)
+- srcs để lưu trữ danh sách các indexes của các chunk trỏ đến chunk hiện tại.
+
+Sau đó, đọc vào kết quả dependency parsing. Mỗi câu sẽ bao gồm danh sách của các
+Chunk objects. Hiển thị nội dung text và giá trị của biến dst của các chunk trong câu
+thứ 8 của file đầu vào.
+
+Các bài tập còn lại trong chương 5 sẽ sử dụng các chương trình được tạo ra ở đây.
+
+### 42. Hiển thị chunk nguồn (head) và chunk đích (modifier) trong các depedency relations
+
+Hiển thị nội dung dạng text các chunk nguồn (head) và chunk đích (modifier)
+trên mỗi dòng và cách nhau bởi ký tự tab. Chú ý không hiển thị các dấu
+(punctuation marks) trong các chunk.
+
+### 43. Trích xuất các dependency relations giữa các chunk chứa danh từ và các chunk chứa động từ
+
+Trích xuất các dependency relations giữa các chunk chứa danh từ và các chunk
+chứa động từ và in ra nội dung text trên mỗi dùng và các thành phần cách nhau bởi dấu cách. Tương tự như bài 42, không hiển thị các
+dấu (punctuation marks) trong các chunk.
+
+### 44. Visualize cây dependency
+
+Visualize cây phụ thuộc của câu đã cho dưới dạng biểu đồ có hướng. Để visualize, có thể chuyển đổi cây phụ thuộc sang ngôn ngữ DOT và sử dụng Graphviz. Thêm nữa, khi visualize một đồ thị có hướng trong Python, có thể sử dụng pydot.
+
+### 45. Trích xuất case pattern của động từ
+
+Yêu cầu của bài tập này là tìm hiểu (investigate) về case frame trong tiếng Nhật
+sử dụng dữ liệu trong file đầu vào neko.txt. Coi các động từ là vị ngữ
+(predicate), các trợ từ (như が,を,...) của chunk liên kết với với động từ là các case, hãy
+in ra các vị ngữ và các "case" theo định dạng cách nhau bởi ký tự tab. Output
+của chương trình cần thoả mãn các điều kiện sau: 
+
+- Ở các chunk có chứa động từ, sử dụng dạng nguyên thể của động từ trái nhất làm vị ngữ.
+- Coi các trợ từ liên kết với các vị ngữ là các "case" trong case frame. 
+- Nếu một vị ngữ được liên kết bởi nhiều trợ từ (chunk), in tất cả các trợ từ theo thứ tự từ điển. Các trợ từ cách nhau bởi dấu cách
+
+Xem xét ví dụ sau: 吾輩はここで始めて人間というものを見た (câu thứ 8 trong
+file neko.txt.cabocha). Câu này gồm hai động từ 始める và 見る. Nếu trong kết
+quả phân tích cú pháp, động từ 始める liên kết với chunk ここで, động từ 見る
+liên kết với với chunk 吾輩は và ものを, chương trình sẽ in ra:
+
+```
+始める で
+見る は を
+```
+
+Lưu output của chương trình ra file, xác nhận các mục sau chỉ với các lệnh của Unix.
+
+- Kết hợp của các vị ngữ và case phổ biển trong corpus.
+- Các case patterns của các động từ する, 見る, 与える (theo thứ tự từ cao đến thấp của tần suất xuất hiện trong corpus).
