@@ -321,3 +321,22 @@ Lưu output của chương trình ra file, xác nhận các mục sau chỉ vớ
 
 - Kết hợp của các vị ngữ và case phổ biển trong corpus.
 - Các case patterns của các động từ する, 見る, 与える (theo thứ tự từ cao đến thấp của tần suất xuất hiện trong corpus).
+
+### 46. Trích xuất thông tin của case pattern của động từ
+
+Chỉnh sửa bài tập 45, trích xuất thêm các chunks mà các vị ngữ (predicate) liên
+kết tới. In ra theo định dạng tab. Ngoài các điều kiện đưa ra ở bài tập 45,
+output phải thoả mãn các điều kiện sau.
+
+- Các modifier là dãy các word của các chunk liên kết tới vị ngữ (không cần phải xoá đuôi và các trợ từ).
+- Trong trường hợp một predicate liên kết với nhiều chunk (bunsetsu), in ra các chunk này theo thứ tự của các trợ từ trong các chunk. Dùng ký tự space để ngăn cách giữa các chunk.
+
+Xem xét ví dụ sau: 吾輩はここで始めて人間というものを見た (câu thứ 8 trong
+file neko.txt.cabocha). Câu này gồm hai động từ 始める và 見る. Nếu trong kết
+quả phân tích cú pháp, động từ 始める liên kết với chunk ここで, động từ 見る
+liên kết với với chunk 吾輩は và ものを, chương trình sẽ in ra:
+
+```
+始める  で      ここで
+見る    は を   吾輩は ものを
+```
