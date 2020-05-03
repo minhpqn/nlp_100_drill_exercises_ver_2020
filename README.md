@@ -340,3 +340,41 @@ liên kết với với chunk 吾輩は và ものを, chương trình sẽ in r
 始める  で      ここで
 見る    は を   吾輩は ものを
 ```
+
+### 47. Mining các cấu trúc câu có động từ chức năng
+
+(cấu trúc này có tên tiếng Nhật là 機能動詞構文)
+
+Bài tập này tập trung vào các case frame を của các động từ, trong đó động từ có dạng liên kết サ変接続名詞. Sửa chương trình trong bài tập 46 để thoả mãn các yêu cầu sau đây.
+
+- Bài tập này tập trung vào các bunsetsu có dạng 「サ変接続名詞+を（助詞）」 liên kết với động từ. 
+- Biến đổi các vị ngữ về dạng 「サ変接続名詞+を+動詞の基本形」. Nếu trong 1 chunk có nhiều động từ, sử dụng động từ bên trái nhất.
+- Trong trường hợp một vĩ ngữ có liên kết với nhiều trợ từ (chunk), in tất cả các trợ từ này theo thứ tự từ điển. Các trợ từ cách nhau bởi dấu cách.
+- Trong trường hợp có nhiều chunks liên kết với một vị ngữ (predicate), in tất cả các chunk này đồng nhất với thứ tự in của các trợ từ mà nó bao gồm. Các chunk được cách nhau bởi ký tự space.
+
+Ví dụ, cho câu sau. 「別段くるにも及ばんさと、主人は手紙に返事をする。」. Chương trình sẽ in ra kết quả sau.
+
+```
+返事をする と に は 及ばんさと 手紙に 主人は
+```
+
+Lưu kết quả của chương trình ra file, chỉ sử dụng lệnh unix để xác nhận:
+
+- Các vị ngữ thường gặp trong corpus (danh từ liên kết sahen + động từ)
+- Các vị ngữ và các case patterns thường xuất hiện trong văn bản.
+
+### 48. Trích xuất ra dependency path từ các danh từ đến gốc
+
+Chương trình yêu cầu trích xuất ra depedency path từ các chunk có chứa danh từ đến root của cây depedency. Các dependency path phải thoả mãn yêu cầu sau đây.
+
+- Biểu diễn các chunk (bunsetsu) dưới dạng chuỗi của các morpheme (surface form)
+- Biểu diễn liên kết giữa các bunsetsu bằng ký tự mũi tên ```->```.
+
+Ví dụ, đầu ra cho câu ví dụ 「吾輩はここで始めて人間というものを見た」(câu thứ 8 trong file neko.txt.cabocha) như sau:
+
+```
+吾輩は -> 見た
+ここで -> 始めて -> 人間という -> ものを -> 見た
+人間という -> ものを -> 見た
+ものを -> 見た
+```
