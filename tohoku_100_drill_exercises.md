@@ -365,4 +365,35 @@ Ví dụ, đầu ra cho câu ví dụ 「吾輩はここで始めて人間とい
 ものを -> 見た
 ```
 
+### 49. Trích xuất ra chuỗi liên kết giữa các danh từ
+
+Trích xuất dependency path ngắn nhất liên kết giữa các cặp noun chunk. Đối với cặp
+noun chunk với index tương ứng là *i* và *j* (*i* \< *j*), các dependency paths
+thoả mãn các yêu cầu sau.
+
+- Giống như bài 48, biểu diễn liên kết giữa các
+bunsetsu bằng ký tự mũi tên (-\>).
+- Thay các noun chunk *i*, và *j* tương ứng
+thành X và Y.
+
+Thêm nữa, các dependency path trong bài tập này có thể được diễn dịch như sau.
+
+- Trên đường đi của noun chunk *i* tới gốc của cây, nếu tồn tại noun chunk *j*: trích xuất dependency path giữa noun chunk *i* và noun chunk *j*.
+- Ngoài trường hợp nói trên, nếu đường đi của noun chunk *i* và noun chunk *j* tới gốc của cây cắt nhau ở bunsetsu *k*: In ra đường đi từ *i* tới bunsetsu ngay trước *k* và
+đường đi từ bunsetsu *j* tới bunsetsu ngay trước *k*. Biểu diễn liên kết với
+bunsetsu *k* bằng ký tự \|.
+
+Ví dụ, kết quả đưa ra cho câu ví dụ
+「吾輩はここで始めて人間というものを見た」(câu thứ 8 trong file
+neko.txt.cabocha) như sau:
+
+```
+Xは | Yで -> 始めて -> 人間という -> ものを | 見た
+Xは | Yという -> ものを | 見た
+Xは | Yを | 見た
+Xで -> 始めて -> Y
+Xで -> 始めて -> 人間という -> Yを
+Xという -> Y
+```
+
 
