@@ -6,6 +6,7 @@
 - [Chương 3: Biểu thức chính quy (Regular Expressions)](#ch-ng-3-bi-u-th-c-ch-nh-quy-regular-expressions)
 - [Chương 4: Morphological Analysis trong tiếng Nhật (形態素解析)](#ch-ng-4-morphological-analysis-trong-ti-ng-nh-t)
 - [Chương 5: Dependency parsing (係り受け解析)](#ch-ng-5-dependency-parsing)
+- [Chương 6: Machine Learning](#ch-ng-6-machine-learning)
 
 100 bài luyện tập xử lý ngôn ngữ tự nhiên phiên bản 2020
 ========================================================
@@ -409,3 +410,19 @@ Xで -> 始めて -> Y
 Xで -> 始めて -> 人間という -> Yを
 Xという -> Y
 ```
+
+<a class="mk-toclify" id="ch-ng-6-machine-learning"></a>
+## Chương 6: Machine Learning
+
+Trong chương trình, chúng ta sẽ sử dụng bộ dữ liệu [News Aggregator Data Set](https://archive.ics.uci.edu/ml/datasets/News+Aggregator) của Fabio Gasparatti và thực hiện bài toán phân loại tiêu đề của các bài báo thành "business", "science and technology", "entertainment", "health".
+
+### 50. Tải và chuẩn bị dữ liệu
+
+Tải xuống bộ dữ liệu [News Aggregator Data Set](https://archive.ics.uci.edu/ml/datasets/News+Aggregator), tạo ra dữ liệu huấn luyện (train.txt), dữ liệu kiểm chứng (valid.txt) và dữ liệu đánh giá (test.txt) theo hướng dẫn dưới đây.
+
+1. Giải nén file zip đã tải xuống, đọc hướng dẫn của file readme.txt
+2. Trích xuất ra các example (bài báo) của các báo "Reuters", "Huffington Post", "Businessweek", "Contactmusic.com", "Daily Mail".
+3. Sắp xếp lại các example đã trích xuất theo thứ tự ngẫu nhiên.
+4. Phân chia các example đã trích xuất với tỉ lệ 80% cho tập train, còn lại dùng 10% cho tập kiểm chứng và 10% cho tập đánh giá và lưu thành các file train.txt, valid.txt, test.txt. Trong các file, mỗi dòng lưu một example, tên của category và title của các bài báo được phân cách bởi dấu tab (Các file này sau này sẽ được dùng lại trong bài tập 70).
+
+Sau khi tạo dữ liệu train và dữ liệu đánh giá, hãy thống kê số lượng example trong các nhãn.
