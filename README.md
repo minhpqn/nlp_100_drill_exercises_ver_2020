@@ -425,4 +425,20 @@ Tải xuống bộ dữ liệu [News Aggregator Data Set](https://archive.ics.uc
 3. Sắp xếp lại các example đã trích xuất theo thứ tự ngẫu nhiên.
 4. Phân chia các example đã trích xuất với tỉ lệ 80% cho tập train, còn lại dùng 10% cho tập kiểm chứng và 10% cho tập đánh giá và lưu thành các file train.txt, valid.txt, test.txt. Trong các file, mỗi dòng lưu một example, tên của category và title của các bài báo được phân cách bởi dấu tab (Các file này sau này sẽ được dùng lại trong bài tập 70).
 
-Sau khi tạo dữ liệu train và dữ liệu đánh giá, hãy thống kê số lượng example trong các nhãn.
+Sau khi tạo dữ liệu train và dữ liệu đánh giá, hãy thống kê số lượng example của các nhãn.
+
+### 51. Trích xuất đặc trưng
+
+Trích xuất đặc trưng từ dữ liệu train, dữ liệu kiểm chứng và dữ liệu đánh giá, lưu vào các file tương ứng train.feature.txt, valid.feature.txt, test.feature.txt. Bạn có thể tự do thiết kế các đặc trưng có thể hữu ích cho việc phân loại. Baseline đơn giản nhất là dùng dùng dãy các từ trong title của bài báo làm đặc trưng.
+
+### 52. Training
+
+Dùng dữ liệu huấn luyện được tạo ra trong bài tập 51, hãy huấn luyện mô hình Logistic Regression.
+
+### 53. Prediction
+
+Sử dụng mô hình Logistic Regression đã huấn luyện trong bài 52, hãy cài đặt chương trình phân loại một tiêu đề của một bài báo cho trước và tính xác suất dự đoán.
+
+### 54. Tính độ chính xác
+
+Hãy tính độ chính xác của mô hình Logistic Regression đã học ở bài tập 52 trên tập dữ liệu huấn luyện (train) và tập dữ liệu đánh giá (test).
