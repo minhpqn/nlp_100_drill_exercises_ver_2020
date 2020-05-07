@@ -439,6 +439,26 @@ Dùng dữ liệu huấn luyện được tạo ra trong bài tập 51, hãy hu�
 
 Sử dụng mô hình Logistic Regression đã huấn luyện trong bài 52, hãy cài đặt chương trình phân loại một tiêu đề của một bài báo cho trước và tính xác suất dự đoán.
 
-### 54. Tính độ chính xác
+### 54. Tính độ chính xác của mô hình
 
 Hãy tính độ chính xác của mô hình Logistic Regression đã học ở bài tập 52 trên tập dữ liệu huấn luyện (train) và tập dữ liệu đánh giá (test).
+
+### 55. Tạo Confusion Matrix
+
+Tạo confusion matrix của mô hình Logistic Regression đã học ở bài tập 52 trên dữ liệu huấn luyện và dữ liệu đánh giá.
+
+### 56. Tính toán Precision, Recall và F1
+
+Hãy tính Precision, Recall, F1 của mô hình Logistic Regression đã học ở bài tập 52 trên dữ liệu test. Tính Precision, Recall, F1 cho từng nhãn rồi tính các giá trị micro-average, macro-average cho các độ đo.
+
+### 57. Xác nhận độ quan trọng của các features
+
+Trong mô hình Logistic Regression đã học ở bài tập 52, hãy xác nhận top-10 các features có trọng số cao nhất và top-10 các features có trọng số thấp nhất.
+
+### 58. Thay đổi tham số hiệu chỉnh (regularizer)
+
+Khi huấn luyện mô hình Logistic Regression, bằng việc thay đổi tham số hiệu chỉnh (Regularization), chúng ta có thể kiểm soát được vấn đề overfitting. Hãy huấn luyện mô hình Logistic Regression bằng các tham số hiệu chỉnh khác nhau và tính độ chính xác trên các tập train, valid và test. Hãy tổng hợp kết quả thực nghiệm trên đồ thị với trục hoành là tham số hiệu chỉnh và trục tung là độ chính xác.
+
+### 59. Hyperparameter Search
+
+Hãy vừa thay đổi thuật toán học máy và các hyperparameter vừa huấn luyện mô hình phân loại. Đưa ra thuật toán học máy, hyperparameter đạt kết quả tốt nhất trên tập valid. Sau đó tính độ chính xác trên tập test sử dụng thuật toán học máy - hyperparameters đã xác định.
