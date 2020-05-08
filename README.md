@@ -7,6 +7,7 @@
 - [Chương 4: Morphological Analysis trong tiếng Nhật (形態素解析)](#ch-ng-4-morphological-analysis-trong-ti-ng-nh-t)
 - [Chương 5: Dependency parsing (係り受け解析)](#ch-ng-5-dependency-parsing)
 - [Chương 6: Machine Learning](#ch-ng-6-machine-learning)
+- [Chương 7: Word Vectors](#ch-ng-7-word-vectors)
 
 100 bài luyện tập xử lý ngôn ngữ tự nhiên phiên bản 2020
 ========================================================
@@ -462,3 +463,22 @@ Khi huấn luyện mô hình Logistic Regression, bằng việc thay đổi tham
 ### 59. Hyperparameter Search
 
 Hãy vừa thay đổi thuật toán học máy và các hyperparameter vừa huấn luyện mô hình phân loại. Đưa ra thuật toán học máy, hyperparameter đạt kết quả tốt nhất trên tập valid. Sau đó tính độ chính xác trên tập test sử dụng thuật toán học máy - hyperparameters đã xác định.
+
+<a class="mk-toclify" id="ch-ng-7-word-vectors"></a>
+## Chương 7: Word Vectors
+
+Liên quan đến word vector (word embedding) biểu diễn ý nghĩa của các từ bằng vector số thực, hãy cài đặt chương trình thực hiện các xử lý sau đây
+
+### 60. Đọc và hiển thị word vector
+
+Download bộ word vectors (3,000,000 từ-phrases, 300 chiều) đã được huấn luyện trên tập dữ liệu Google News (khoảng 100 tỉ từ), hiển thị word vector của từ "United States". Chú ý rằng thực tế, bên trong mô hình, từ "United States" được biểu diễn bằng "United_States".
+
+61. 単語の類似度
+
+### 61. Word similarity
+
+Tính cosine similarity của từ "United States" và "U.S."
+
+### 62. Hiển thị top 10 có độ tương tự cao nhất
+
+Trích xuất 10 từ có cosine similarity cao nhất với từ "United States" và giá trị cosine similarity của chúng.
