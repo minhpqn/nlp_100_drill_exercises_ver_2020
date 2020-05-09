@@ -455,8 +455,6 @@ Liên quan đến word vector (word embedding) biểu diễn ý nghĩa của cá
 
 Download bộ word vectors (3,000,000 từ-phrases, 300 chiều) đã được huấn luyện trên tập dữ liệu Google News (khoảng 100 tỉ từ), hiển thị word vector của từ "United States". Chú ý rằng thực tế, bên trong mô hình, từ "United States" được biểu diễn bằng "United_States".
 
-61. 単語の類似度
-
 ### 61. Word similarity
 
 Tính cosine similarity của từ "United States" và "U.S."
@@ -465,4 +463,15 @@ Tính cosine similarity của từ "United States" và "U.S."
 
 Trích xuất 10 từ có cosine similarity cao nhất với từ "United States" và giá trị cosine similarity của chúng.
 
+### 63. Anology theo tính chất của phép cộng
+
+Lấy word vector của từ "Spain" trừ đi vector của từ "Madrid", cộng vào vector của từ "Athens", đưa ra 10 từ có độ tương tự cao nhất với vector thu được cùng với độ tương tự của chúng.
+
+### 64. Thực nghiệm trên dữ liệu Analogy
+
+Tải xuống [dữ liệu đánh giá cho bài toán Word Analogy](http://download.tensorflow.org/data/questions-words.txt), tính vec(từ ở cột thứ hai) - vec(từ ở cột đầu tiên) + vec(từ ở cột thứ ba) và tìm từ có độ tương tự cao nhất với vectơ thu được cùng với giá trị của độ tương tự. Viết thêm từ được tìm ra và độ tương tự vào cuối mỗi ví dụ.
+
+### 65. Tính độ chính xác trên task Word Analogy
+
+Sử dụng kết quả của bài 64, tính độ chính của semantic analogy và syntactic analogy.
 
