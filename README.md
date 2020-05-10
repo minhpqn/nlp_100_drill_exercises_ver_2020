@@ -492,3 +492,7 @@ Tải xuống [dữ liệu đánh giá cho bài toán Word Analogy](http://downl
 ### 65. Tính độ chính xác trên task Word Analogy
 
 Sử dụng kết quả của bài 64, tính độ chính của semantic analogy và syntactic analogy.
+
+### 66. Đánh giá trên tập dữ liệu WordSimilarity-353
+
+Download tập dữ liệu đánh giá [The WordSimilarity-353 Test Collection](http://www.gabrilovich.com/resources/data/wordsim353/wordsim353.html), hãy tính độ tương quan Spearman giữa xếp hạng độ tương tự được tính toán dựa trên word vectors và xếp hạng được đoán định bởi con người.
