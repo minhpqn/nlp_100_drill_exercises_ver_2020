@@ -496,3 +496,15 @@ Sử dụng kết quả của bài 64, tính độ chính của semantic analogy
 ### 66. Đánh giá trên tập dữ liệu WordSimilarity-353
 
 Download tập dữ liệu đánh giá [The WordSimilarity-353 Test Collection](http://www.gabrilovich.com/resources/data/wordsim353/wordsim353.html), hãy tính độ tương quan Spearman giữa xếp hạng độ tương tự được tính toán dựa trên word vectors và xếp hạng được đoán định bởi con người.
+
+### 67. k-means clustering
+
+Trích xuất các word vectors của các word liên quan đến tên quốc gia, sau đó thực hiện k-means clustering với số cluster k=5.
+
+### 68. Clustering theo phương pháp Ward
+
+Trích xuất các word vectors của các word liên quan đến tên quốc gia, thực hiện hierarchical clustering bằng phương pháp Ward. Visualize kết quả clustering dưới dạng dendogram.
+
+### 69. Visualize bằng t-SNE
+
+Visualize không gian vector của các word liên quan đến tên quốc gia bằng t-SNE.
