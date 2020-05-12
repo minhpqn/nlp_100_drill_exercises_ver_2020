@@ -499,4 +499,4 @@ Cài đặt mô hình phân loại bằng mạng neural cho bài toán phân lo�
 
 Chúng ta muốn chuyển đổi dữ liệu train, valid và test được xây dựng trong bài tập 50 thành ma trận và vectơ.
 
-Ví dụ, đối với dữ liệu train, chúng ta muốn tạo một ma trận $X$ gồm các vectơ đặc trưng $x_i$ của tất cả các example $x_i$ và ma trận (vectơ) $Y$ gồm các nhãn của các example.
+Ví dụ, đối với dữ liệu train, chúng ta muốn tạo một ma trận X gồm các vectơ đặc trưng <img src="https://render.githubusercontent.com/render/math?math=x_i"> của tất cả các example <img src="https://render.githubusercontent.com/render/math?math=x_i"> và ma trận (vectơ) Y gồm các nhãn của các example.
