@@ -8,6 +8,7 @@
 - [Chương 5: Dependency parsing (係り受け解析)](#ch-ng-5-dependency-parsing)
 - [Chương 6: Machine Learning](#ch-ng-6-machine-learning)
 - [Chương 7: Word Vectors](#ch-ng-7-word-vectors)
+- [Chuwowng 8: Neural Networks](#chuwowng-8-neural-networks)
 
 100 bài luyện tập xử lý ngôn ngữ tự nhiên phiên bản 2020
 ========================================================
@@ -508,3 +509,14 @@ Trích xuất các word vectors của các word liên quan đến tên quốc gi
 ### 69. Visualize bằng t-SNE
 
 Visualize không gian vector của các word liên quan đến tên quốc gia bằng t-SNE.
+
+<a class="mk-toclify" id="chuwowng-8-neural-networks"></a>
+## Chuwowng 8: Neural Networks
+
+Cài đặt mô hình phân loại bằng mạng neural cho bài toán phân loại các bài báo đã làm trong chương 6. Sử dụng các nền tảng học máy như PyTorch, TensorFlow hoặc Chainer trong chương này.
+
+### 70. Sử dụng tổng của các word vectors làm features
+
+Chúng ta muốn chuyển đổi dữ liệu train, valid và test được xây dựng trong bài tập 50 thành ma trận và vectơ.
+
+Ví dụ, đối với dữ liệu train, chúng ta muốn tạo một ma trận $X$ gồm các vectơ đặc trưng $x_i$ của tất cả các example $x_i$ và ma trận (vectơ) $Y$ gồm các nhãn của các example.
