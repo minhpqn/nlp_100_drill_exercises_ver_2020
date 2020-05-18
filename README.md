@@ -8,7 +8,8 @@
 - [Chương 5: Dependency parsing (係り受け解析)](#ch-ng-5-dependency-parsing)
 - [Chương 6: Machine Learning](#ch-ng-6-machine-learning)
 - [Chương 7: Word Vectors](#ch-ng-7-word-vectors)
-- [Chuwowng 8: Neural Networks](#chuwowng-8-neural-networks)
+- [Chương 8: Neural Networks](#ch-ng-8-neural-networks)
+- [Chương 10: Machine Translation](#ch-ng-10-machine-translation)
 
 100 bài luyện tập xử lý ngôn ngữ tự nhiên phiên bản 2020
 ========================================================
@@ -510,8 +511,8 @@ Trích xuất các word vectors của các word liên quan đến tên quốc gi
 
 Visualize không gian vector của các word liên quan đến tên quốc gia bằng t-SNE.
 
-<a class="mk-toclify" id="chuwowng-8-neural-networks"></a>
-## Chuwowng 8: Neural Networks
+<a class="mk-toclify" id="ch-ng-8-neural-networks"></a>
+## Chương 8: Neural Networks
 
 Cài đặt mô hình phân loại bằng mạng neural cho bài toán phân loại các bài báo đã làm trong chương 6. Sử dụng các nền tảng học máy như PyTorch, TensorFlow hoặc Chainer trong chương này.
 
@@ -520,3 +521,16 @@ Cài đặt mô hình phân loại bằng mạng neural cho bài toán phân lo�
 Chúng ta muốn chuyển đổi dữ liệu train, valid và test được xây dựng trong bài tập 50 thành ma trận và vectơ.
 
 Ví dụ, đối với dữ liệu train, chúng ta muốn tạo một ma trận X gồm các vectơ đặc trưng <img src="https://render.githubusercontent.com/render/math?math=x_i"> của tất cả các example <img src="https://render.githubusercontent.com/render/math?math=x_i"> và ma trận (vectơ) Y gồm các nhãn của các example.
+
+<img src="./figs/fig01.png" width="400"/>
+
+Ở đây *n* là số lượng các example trong dữ liệu train, <img src="https://render.githubusercontent.com/render/math?math=x_i\in R^d"> và <img src="https://render.githubusercontent.com/render/math?math=y_i\in N"> lần lượt biểu diễn vectơ đặc trưng và nhãn của ví dụ thứ <img src="https://render.githubusercontent.com/render/math?math=i\in \{1,...,n\}">. Chú ý rằng, chúng ta sẽ dùng 4 nhãn "business", "science and technology", "entertainment", "health".
+
+<a class="mk-toclify" id="ch-ng-10-machine-translation"></a>
+## Chương 10: Machine Translation
+
+Trong chương này, chúng ta sẽ sử dụng corpus song ngữ Nhật - Anh của [The Kyoto Free Translation Task (KFTT)](http://www.phontron.com/kftt/index-ja.html)  và huấn luyện mô hình dịch máy dùng mạng neural (neural machine translation). Khi tạo mô hình dịch máy dùng mạng neural, hãy dùng các công cụ có sẵn như [fairseq](https://github.com/pytorch/fairseq), [Hugging Face Transformers](https://github.com/huggingface/transformers) hay [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py).
+
+### 90. Chuẩn bị dữ liệu
+
+Download dữ liệu dịch máy. Tạo dữ liệu train, dev và test và thực hiện tiền xử lý cần thiết như tokenization. Thực ra ở mức độ này, chúng ta sẽ sử dụng word (trong tiếng Anh) và morpheme (trong tiếng Nhật) như là đơn vị của token.
