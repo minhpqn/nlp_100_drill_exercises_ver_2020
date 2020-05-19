@@ -513,3 +513,26 @@ Trong chương này, chúng ta sẽ sử dụng corpus song ngữ Nhật - Anh c
 
 Download dữ liệu dịch máy. Tạo dữ liệu train, dev và test và thực hiện tiền xử lý cần thiết như tokenization. Thực ra ở mức độ này, chúng ta sẽ sử dụng word (trong tiếng Anh) và morpheme (trong tiếng Nhật) như là đơn vị của token.
 
+### 91. Huấn luyện mô hình dịch máy
+
+Sử dụng dữ liệu đã chuẩn bị ở bài tập 90, hãy học mô hình dịch máy dùng mạng neural (có thể chọn mô hình mạng neural như Transformer hay LSTM).
+
+### 92. Áp dụng mô hình dịch máy
+
+Sử dụng mô hình dịch máy neural đã học ở bài tập 91, cài đặt chương trình dịch một câu tiếng Nhật cho trước (tùy ý) ra tiếng Anh.
+
+### 93. Tính BLEU score
+
+Để kiểm tra chất lượng của mô hình dịch máy neural đã học ở bài tập 91, tính điểm BLEU trên dữ liệu test.
+
+### 94. Beam Search
+
+Trong bước decode câu dịch bằng mô hình dịch máy neural đã học ở bài 91, hãy sử dụng thuật toán beam search. Thay đổi beam size từ 1 đến 100 và vẽ dodoff thị thể hiện sự biến đổi của BLEU score trên tập dev.
+
+### 95. Sử dụng subword
+
+Thay đổi từ đơn vị của token từ word hoặc morpheme thành subword và thực hiện lại các thí nghiệm từ bài 91 đến bài 94.
+
+### 98. Domain adaptation
+
+Sử dụng dữ liệu dịch máy [Japanese-English Subtitle Corpus (JESC)](https://nlp.stanford.edu/projects/jesc/index_ja.html) hoặc [JParaCrawl](http://www.kecl.ntt.co.jp/icl/lirg/jparacrawl/), thử tăng performance trên tập test của dữ liệu KFTT.
