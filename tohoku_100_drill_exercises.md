@@ -533,6 +533,14 @@ Trong bước decode câu dịch bằng mô hình dịch máy neural đã học 
 
 Thay đổi từ đơn vị của token từ word hoặc morpheme thành subword và thực hiện lại các thí nghiệm từ bài 91 đến bài 94.
 
+### 97. Tune hyper-parameters
+
+Thay đổi mô hình mạng neural cùng với các hyper-parameters và tìm ra mô hình mạng và bộ hyper-parameters cho BLEU score cao nhất trên tập dữ liệu dev.
+
 ### 98. Domain adaptation
 
 Sử dụng dữ liệu dịch máy [Japanese-English Subtitle Corpus (JESC)](https://nlp.stanford.edu/projects/jesc/index_ja.html) hoặc [JParaCrawl](http://www.kecl.ntt.co.jp/icl/lirg/jparacrawl/), thử tăng performance trên tập test của dữ liệu KFTT.
+
+### 99. Tạo translation server
+
+Tạo hệ thống demo trên nền Web hiển thị kết quả dịch khi người dùng nhập vào một câu muốn dịch.
