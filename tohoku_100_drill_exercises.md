@@ -533,6 +533,10 @@ Trong bước decode câu dịch bằng mô hình dịch máy neural đã học 
 
 Thay đổi từ đơn vị của token từ word hoặc morpheme thành subword và thực hiện lại các thí nghiệm từ bài 91 đến bài 94.
 
+### Visualize quá trình training
+
+Sử dụng công cụ chẳng hạn [Tensorboard](https://www.tensorflow.org/tensorboard) hãy visualize quá trình mô hình dịch máy neural được học. Hãy dùng giá trị của hàm loss và BLUE score trên tập train và giá trị hàm loss và BLEU score trên tập dev để quan sát khi visualize quá trình học model.
+
 ### 97. Tune hyper-parameters
 
 Thay đổi mô hình mạng neural cùng với các hyper-parameters và tìm ra mô hình mạng và bộ hyper-parameters cho BLEU score cao nhất trên tập dữ liệu dev.
