@@ -505,6 +505,18 @@ Ví dụ, đối với dữ liệu train, chúng ta muốn tạo một ma trận
 
 Ở đây *n* là số lượng các example trong dữ liệu train, <img src="https://render.githubusercontent.com/render/math?math=x_i\in R^d"> và <img src="https://render.githubusercontent.com/render/math?math=y_i\in N"> lần lượt biểu diễn vectơ đặc trưng và nhãn của ví dụ thứ <img src="https://render.githubusercontent.com/render/math?math=i\in \{1,...,n\}">. Chú ý rằng, chúng ta sẽ dùng 4 nhãn "business", "science and technology", "entertainment", "health".
 
+### 74. Tính độ chính xác
+
+Khi sử dụng ma trận trọng số đã tìm được ở bài tập 73 để phân loại các ví dụ của tập train và tập tập test, hãy tính độ chính xác trên các tập dữ liệu.
+
+### 78. Train trên GPU
+
+Cải biến code của bài 77 và thực hiện train trên GPU.
+
+### 79. Mạng neural nhiều tầng
+
+Cải biến code của bài tập 78, hãy thay đổi kiến trúc của mạng neural bằng việc thêm vào bias term và thêm layer, hãy tạo một bộ phân lớp có hiệu quả cao.
+
 ## Chương 10: Machine Translation
 
 Trong chương này, chúng ta sẽ sử dụng corpus song ngữ Nhật - Anh của [The Kyoto Free Translation Task (KFTT)](http://www.phontron.com/kftt/index-ja.html)  và huấn luyện mô hình dịch máy dùng mạng neural (neural machine translation). Khi tạo mô hình dịch máy dùng mạng neural, hãy dùng các công cụ có sẵn như [fairseq](https://github.com/pytorch/fairseq), [Hugging Face Transformers](https://github.com/huggingface/transformers) hay [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py).
