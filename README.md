@@ -526,9 +526,17 @@ Ví dụ, đối với dữ liệu train, chúng ta muốn tạo một ma trận
 
 Ở đây *n* là số lượng các example trong dữ liệu train, <img src="https://render.githubusercontent.com/render/math?math=x_i\in R^d"> và <img src="https://render.githubusercontent.com/render/math?math=y_i\in N"> lần lượt biểu diễn vectơ đặc trưng và nhãn của ví dụ thứ <img src="https://render.githubusercontent.com/render/math?math=i\in \{1,...,n\}">. Chú ý rằng, chúng ta sẽ dùng 4 nhãn "business", "science and technology", "entertainment", "health".
 
+73. Training với thuật toán Stochastic Gradient Descent
+
+Sử dụng thuật toán Stochastic Gradient Descent (SGD), hãy học ma trận <img src="https://render.githubusercontent.com/render/math?math=W">. Thêm nữa, bước training có thể được cho kết thúc bằng một tiêu chuẩn thích hợp (ví dụ "kết thúc khi đã qua 100 epoch").
+
 ### 74. Tính độ chính xác
 
 Khi sử dụng ma trận trọng số đã tìm được ở bài tập 73 để phân loại các ví dụ của tập train và tập tập test, hãy tính độ chính xác trên các tập dữ liệu.
+
+### 76. Checkpoint
+
+Cải biến code của bài tập 75, mỗi khi kết thúc việc cập nhật tham số trong mỗi epoch, lưu lại checkpoint (giá trị của parameter (chẳng hạn ma trận trong số) trong lúc training và trạng thái bên trọng của thuật toán tối ưu hóa) vào file.
 
 ### 78. Train trên GPU
 
