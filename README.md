@@ -9,6 +9,7 @@
 - [Chương 6: Machine Learning](#ch-ng-6-machine-learning)
 - [Chương 7: Word Vectors](#ch-ng-7-word-vectors)
 - [Chương 8: Neural Networks](#ch-ng-8-neural-networks)
+- [Chương 9: RNN, CNN](#ch-ng-9-rnn-cnn)
 - [Chương 10: Machine Translation](#ch-ng-10-machine-translation)
 
 100 bài luyện tập xử lý ngôn ngữ tự nhiên phiên bản 2020
@@ -553,6 +554,13 @@ Cải biến code của bài 77 và thực hiện train trên GPU.
 ### 79. Mạng neural nhiều tầng
 
 Cải biến code của bài tập 78, hãy thay đổi kiến trúc của mạng neural bằng việc thêm vào bias term và thêm layer, hãy tạo một bộ phân lớp có hiệu quả cao.
+
+<a class="mk-toclify" id="ch-ng-9-rnn-cnn"></a>
+## Chương 9: RNN, CNN
+
+### 89. Transfer learning từ mô hình ngôn ngữ đã được pre-train
+
+Lấy mô hình ngôn ngữ đã được huấn luyện trước (ví dụ BERT) làm xuất phát điểm, hãy xây dựng mô hình phân loại tiêu đề của các bài tin tức.
 
 <a class="mk-toclify" id="ch-ng-10-machine-translation"></a>
 ## Chương 10: Machine Translation

@@ -533,6 +533,12 @@ Cải biến code của bài 77 và thực hiện train trên GPU.
 
 Cải biến code của bài tập 78, hãy thay đổi kiến trúc của mạng neural bằng việc thêm vào bias term và thêm layer, hãy tạo một bộ phân lớp có hiệu quả cao.
 
+## Chương 9: RNN, CNN
+
+### 89. Transfer learning từ mô hình ngôn ngữ đã được pre-train
+
+Lấy mô hình ngôn ngữ đã được huấn luyện trước (ví dụ BERT) làm xuất phát điểm, hãy xây dựng mô hình phân loại tiêu đề của các bài tin tức.
+
 ## Chương 10: Machine Translation
 
 Trong chương này, chúng ta sẽ sử dụng corpus song ngữ Nhật - Anh của [The Kyoto Free Translation Task (KFTT)](http://www.phontron.com/kftt/index-ja.html)  và huấn luyện mô hình dịch máy dùng mạng neural (neural machine translation). Khi tạo mô hình dịch máy dùng mạng neural, hãy dùng các công cụ có sẵn như [fairseq](https://github.com/pytorch/fairseq), [Hugging Face Transformers](https://github.com/huggingface/transformers) hay [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py).
