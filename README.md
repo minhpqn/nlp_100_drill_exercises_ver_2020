@@ -558,6 +558,14 @@ Cải biến code của bài tập 78, hãy thay đổi kiến trúc của mạn
 <a class="mk-toclify" id="ch-ng-9-rnn-cnn"></a>
 ## Chương 9: RNN, CNN
 
+### 83. Mini-batching và huấn luyện trên GPU
+
+Sửa code của bài 82, hãy tính toán giá trị hàm loss, gradient cho mỗi *B* example và huấn luyện mô hình (hãy chọn giá trị thích hợp cho *B*). Thêm nữa, hãy train mô hình trên GPU.
+
+### 88. Hyperparameter tuning
+
+Sửa code của bài tập 85 và 87, thay đổi kiến trúc mạng và các hyperparameter để xây dựng một bộ phân loại văn bản có hiệu quả cao.
+
 ### 89. Transfer learning từ mô hình ngôn ngữ đã được pre-train
 
 Lấy mô hình ngôn ngữ đã được huấn luyện trước (ví dụ BERT) làm xuất phát điểm, hãy xây dựng mô hình phân loại tiêu đề của các bài tin tức.
