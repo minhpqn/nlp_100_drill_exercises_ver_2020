@@ -535,9 +535,17 @@ Cải biến code của bài tập 78, hãy thay đổi kiến trúc của mạn
 
 ## Chương 9: RNN, CNN
 
+### 82. Huấn luyện bằng thuật toán Stochastic Gradient Descent
+
+Sử dụng thuật toán SGD (Stochastic Gradient Descent), hãy huấn luyện mô hình đã tạo ra ở bài 81. Huấn luyện mô hình, đồng thời hiển thị giá trị của hàm loss và độ chính xác trên tập huấn luyện và tập test. Hãy kết thúc giải thuật với tiêu chuẩn thích hợp (ví dụ sau 10 epochs).
+
 ### 83. Mini-batching và huấn luyện trên GPU
 
 Sửa code của bài 82, hãy tính toán giá trị hàm loss, gradient cho mỗi *B* example và huấn luyện mô hình (hãy chọn giá trị thích hợp cho *B*). Thêm nữa, hãy train mô hình trên GPU.
+
+### 87. Huấn luyện mô hình CNN bằng thuật toán Stochastic Gradient Descent
+
+Sử dụng thuật toán SGD (Stochastic Gradient Descent), hãy huấn luyện mô hình đã tạo ra ở bài 86. Huấn luyện mô hình, đồng thời hiển thị giá trị của hàm loss và độ chính xác trên tập huấn luyện và tập test. Hãy kết thúc giải thuật với tiêu chuẩn thích hợp (ví dụ sau 10 epochs).
 
 ### 88. Hyperparameter tuning
 
