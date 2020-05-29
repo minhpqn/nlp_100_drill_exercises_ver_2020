@@ -527,6 +527,14 @@ Ví dụ, đối với dữ liệu train, chúng ta muốn tạo một ma trận
 
 Ở đây *n* là số lượng các example trong dữ liệu train, <img src="https://render.githubusercontent.com/render/math?math=x_i\in R^d"> và <img src="https://render.githubusercontent.com/render/math?math=y_i\in N"> lần lượt biểu diễn vectơ đặc trưng và nhãn của ví dụ thứ <img src="https://render.githubusercontent.com/render/math?math=i\in \{1,...,n\}">. Chú ý rằng, chúng ta sẽ dùng 4 nhãn "business", "science and technology", "entertainment", "health".
 
+### 72. Tính loss và gradient
+
+Hãy tính hàm cross entropy loss và gradient theo ma trận <img src="https://render.githubusercontent.com/render/math?math=W"> đối với example <img src="https://render.githubusercontent.com/render/math?math=x_1"> và tập các example <img src="https://render.githubusercontent.com/render/math?math=x_1,x_2,x_3,x_4"> của tập dữ liệu huấn luyện. Hơn nữa, hàm loss đối với example <img src="https://render.githubusercontent.com/render/math?math=x_i"> được tính bởi công thức sau đây.
+
+<img src="./figs/fig02.png" width="400"/>
+
+Thật ra, hàm cross-entropy loss đối với một tập các example sẽ lấy trung bình cộng của hàm loss của các example trong tập dữ liệu đó.
+
 ### 73. Training với thuật toán Stochastic Gradient Descent
 
 Sử dụng thuật toán Stochastic Gradient Descent (SGD), hãy học ma trận <img src="https://render.githubusercontent.com/render/math?math=W">. Thêm nữa, bước training có thể được cho kết thúc bằng một tiêu chuẩn thích hợp (ví dụ "kết thúc khi đã qua 100 epoch").
