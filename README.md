@@ -566,6 +566,10 @@ Sử dụng thuật toán SGD (Stochastic Gradient Descent), hãy huấn luyện
 
 Sửa code của bài 82, hãy tính toán giá trị hàm loss, gradient cho mỗi *B* example và huấn luyện mô hình (hãy chọn giá trị thích hợp cho *B*). Thêm nữa, hãy train mô hình trên GPU.
 
+### 84. Áp dụng word embedding
+
+Hãy khởi tạo word embedding <img src="https://render.githubusercontent.com/render/math?math=emb(x)"> bằng pre-trained word vector (chẳng hạn bộ pre-trained word vector trên tập dữ liệu Google News (khoảng 100 tỉ từ)) và huấn luyện mạng neural.
+
 ### 87. Huấn luyện mô hình CNN bằng thuật toán Stochastic Gradient Descent
 
 Sử dụng thuật toán SGD (Stochastic Gradient Descent), hãy huấn luyện mô hình đã tạo ra ở bài 86. Huấn luyện mô hình, đồng thời hiển thị giá trị của hàm loss và độ chính xác trên tập huấn luyện và tập test. Hãy kết thúc giải thuật với tiêu chuẩn thích hợp (ví dụ sau 10 epochs).
