@@ -543,6 +543,10 @@ Cải biến code của bài tập 78, hãy thay đổi kiến trúc của mạn
 
 ## Chương 9: RNN, CNN
 
+### 80. Biến đổi thành số ID
+
+Chúng ta muốn gán cho mỗi từ trong dữ liệu huấn luyện chúng ta đã tạo ra trong bài tập 51 một số ID duy nhất. Hãy gán số ID cho các từ xuất hiện 2 lần trở lên trong dữ liệu huấn luyện bằng phương pháp: từ xuất hiện nhiều nhất được gán ID bằng 1, từ xuất hiện nhiều thứ 2 được gán ID bằng 2,... Sau đó, hãy cài đặt hàm trả về một dãy các ID cho một chuỗi các từ cho trước. Ngoài ra, tất cả các từ có tần suất xuất hiện ít hơn 2 (trong dữ liệu train) được gán ID bằng 0.
+
 ### 82. Huấn luyện bằng thuật toán Stochastic Gradient Descent
 
 Sử dụng thuật toán SGD (Stochastic Gradient Descent), hãy huấn luyện mô hình đã tạo ra ở bài 81. Huấn luyện mô hình, đồng thời hiển thị giá trị của hàm loss và độ chính xác trên tập huấn luyện và tập test. Hãy kết thúc giải thuật với tiêu chuẩn thích hợp (ví dụ sau 10 epochs).
@@ -553,7 +557,7 @@ Sửa code của bài 82, hãy tính toán giá trị hàm loss, gradient cho m�
 
 ### 84. Áp dụng word embedding
 
-Hãy khởi tạo word embedding <img src="https://render.githubusercontent.com/render/math?math=emb(x)"> bằng pre-trained word vector (chẳng hạn bộ pre-trained word vector trên tập dữ liệu Google News (khoảng 100 tỉ từ)) và huấn luyện mạng neural.
+Hãy khởi tạo word embedding <img src="https://render.githubusercontent.com/render/math?math=emb(x)"> bằng pre-trained word vector (chẳng hạn bộ [pre-trained word vector](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing) được huấn luyện trên tập dữ liệu Google News (khoảng 100 tỉ từ)) và huấn luyện mạng neural.
 
 ### 87. Huấn luyện mô hình CNN bằng thuật toán Stochastic Gradient Descent
 
