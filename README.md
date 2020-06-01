@@ -18,6 +18,8 @@
 Dịch từ tài liệu [言語処理100本ノック 2020](<https://nlp100.github.io/ja>) của lab Inui-Okazaki, đại học Tohoku, Nhật Bản. Người dịch: Phạm Quang Nhật Minh
 (minhpqn).
 
+**Note**: Khác với [phiên bản 2005](https://github.com/minhpqn/nlp_100_drill_exercises), phiên bản 2020 bổ sung 3 chương 8, 9, 10 về các nội dung liên quan đến mô hình Neural Networks.
+
 <a class="mk-toclify" id="ch-ng-1-b-i-t-p-kh-i-ng"></a>
 ## Chương 1: Bài tập khởi động
 
@@ -106,7 +108,7 @@ Chuyễn mỗi ký tự tab thành ký tự space. Xác nhận kết quả bằn
 Trích xuất nội dung trong cột 1, cột 2 của các dòng trong file và lưu vào các file tương ứng: `col1.txt`
 và `col2.txt`. Thử thực hiện công việc với lệnh `cut` trong unix.
 
-### 13．Trộn hai file col1.txt và col2.txt
+### 13. Trộn hai file col1.txt và col2.txt
 
 Kết hợp nội dung trong 2 file `col1.txt` và `col2.txt` đã được tạo ra trong bài 12 để tạo thành một file mới có
 nội dung giống gồm cột 1 và cột 2 trong file ban đầu và các cột cách nhau bởi ký tự tab. Sử dụng lệnh `paste` để thực hiện bài tập và xác nhận kết quả của chương trình bạn viết.
@@ -525,7 +527,44 @@ Ví dụ, đối với dữ liệu train, chúng ta muốn tạo một ma trận
 
 <img src="./figs/fig01.png" width="400"/>
 
-Ở đây *n* là số lượng các example trong dữ liệu train, <img src="https://render.githubusercontent.com/render/math?math=x_i\in R^d"> và <img src="https://render.githubusercontent.com/render/math?math=y_i\in N"> lần lượt biểu diễn vectơ đặc trưng và nhãn của ví dụ thứ <img src="https://render.githubusercontent.com/render/math?math=i\in \{1,...,n\}">. Chú ý rằng, chúng ta sẽ dùng 4 nhãn "business", "science and technology", "entertainment", "health".
+Ở đây *n* là số lượng các example trong dữ liệu train, <img src="https://render.githubusercontent.com/render/math?math=x_i\in R^d"> và <img src="https://render.githubusercontent.com/render/math?math=y_i\in N"> lần lượt biểu diễn vectơ đặc trưng và nhãn của ví dụ thứ <img src="https://render.githubusercontent.com/render/math?math=i\in \{1,...,n\}">. Chú ý rằng, chúng ta sẽ dùng 4 nhãn "business", "science and technology", "entertainment", "health". Nếu sử dụng kí hiệu <img src="https://render.githubusercontent.com/render/math?math=\mathbb{K}"> để biểu diễn các số tự nhiên nhỏ hơn 4 (bao gồm cả 0), thì chúng ta có thể biểu diễn nhãn <img src="https://render.githubusercontent.com/render/math?math=y_i"> của một example bất kì bằng <img src="https://render.githubusercontent.com/render/math?math=y_i \in \mathbb{K}">. Sau đây, chúng ta sẽ biểu diễn số lớp là *L* (trong bài toán phân loại hiện tại thì *L* = 4).
+
+Vector đặc trưng <img src="https://render.githubusercontent.com/render/math?math=x_i"> của example thứ *i* sẽ được tính bởi công thức sau.
+
+<img src="./figs/fig03.png" width="250"/>
+
+Ở đây, example thứ *i* được cấu thành từ một dãy <img src="https://render.githubusercontent.com/render/math?math=T_i"> token <img src="https://render.githubusercontent.com/render/math?math=(w_{i,1},w_{i,2},...,w_{i,T_i})">, <img src="https://render.githubusercontent.com/render/math?math=\text{embd}(w) \in \mathbb{R}^d"> là word vector (số chiều là *d*) tương ứng với token *w*. Tức là, title của bài báo của điểm dữ liệu thứ *i* được biểu diễn bằng vector <img src="https://render.githubusercontent.com/render/math?math=x_i"> sẽ được tính bằng cách lấy trung bình các word vector của các token nằm trong title đó. Trong chương này, chúng ta có thể sử dụng bộ word vector đã tải về trong bài tập 60. Vì chúng ta dùng các word vector với số chiều 300 nên *d*=300.
+
+Chúng ta định nghĩa nhãn <img src="https://render.githubusercontent.com/render/math?math=y_i"> của example thứ *i* như sau.
+
+<img src="./figs/fig04.png" width="450"/>
+
+Ngoài ra, nếu tên category và số biểu diễn nhãn tương ứng 1-1, bạn không nhất thiết phải sử dụng công thức ở trên.
+
+Dựa vào phương pháp ở trên, hãy tạo các ma trận - vector dưới đây rồi lưu vào file.
+
+- Ma trận feature của tập dữ liệu train: <img src="https://render.githubusercontent.com/render/math?math=X_{\text{train}} \in \mathbb{R}^{N_t \times d}">
+- Vector label của tập dữ liệu train: <img src="https://render.githubusercontent.com/render/math?math=Y_{\text{train}} \in \mathbb{N}^{N_t}">.
+- Ma trận featture của tập dữ liệu kiểm chứng: <img src="https://render.githubusercontent.com/render/math?math=X_{\text{valid}} \in \mathbb{R}^{N_v \times d}">.
+- Vector label của tập dữ liệu kiểm chứng: <img src="https://render.githubusercontent.com/render/math?math=Y_{\text{valid}} \in \mathbb{N}^{N_v}">.
+- Ma trận feature của tập dữ liệu test: <img src="https://render.githubusercontent.com/render/math?math=X_{\text{test}} \in \mathbb{R}^{N_e \times d}">.
+- Vector label của tập dữ liệu test: <img src="https://render.githubusercontent.com/render/math?math=Y_{\text{test}} \in \mathbb{N}^{N_e}">.
+
+Ở đây, <img src="https://render.githubusercontent.com/render/math?math=N_t">, <img src="https://render.githubusercontent.com/render/math?math=N_v">, <img src="https://render.githubusercontent.com/render/math?math=N_e"> tương ứng là số lượng example trong tập dữ liệu train, valid và test.
+
+### 71. Dự đoán dùng mạng neural đơn tầng
+
+問題70で保存した行列を読み込み，学習データについて以下の計算を実行せよ．
+y^1=softmax(x1W),Y^=softmax(X[1:4]W)
+
+ただし，softmax
+はソフトマックス関数，X[1:4]∈R4×dは特徴ベクトルx1,x2,x3,x4
+
+を縦に並べた行列である．
+X[1:4]=⎛⎝⎜⎜⎜x1x2x3x4⎞⎠⎟⎟⎟
+
+行列W∈Rd×L
+は単層ニューラルネットワークの重み行列で，ここではランダムな値で初期化すればよい（問題73以降で学習して求める）．なお，y^1∈NLは未学習の行列Wで事例x1を分類したときに，各カテゴリに属する確率を表すベクトルである． 同様に，Y^∈Nn×Lは，学習データの事例x1,x2,x3,x4について，各カテゴリに属する確率を行列として表現している．
 
 ### 72. Tính loss và gradient
 
