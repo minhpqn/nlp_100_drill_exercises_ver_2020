@@ -532,17 +532,15 @@ Dựa vào phương pháp ở trên, hãy tạo các ma trận - vector dưới 
 
 ### 71. Dự đoán dùng mạng neural đơn tầng
 
-問題70で保存した行列を読み込み，学習データについて以下の計算を実行せよ．
-y^1=softmax(x1W),Y^=softmax(X[1:4]W)
+Đọc vào ma trận/vector đã lưu ở bài tập 70, hãy thực hiện tính toán dưới đây trên dữ liệu train.
 
-ただし，softmax
-はソフトマックス関数，X[1:4]∈R4×dは特徴ベクトルx1,x2,x3,x4
+<img src="./figs/fig05.png" width="250"/>
 
-を縦に並べた行列である．
-X[1:4]=⎛⎝⎜⎜⎜x1x2x3x4⎞⎠⎟⎟⎟
+Ở đây, softmax là kí hiệu của hàm softmax, <img src="https://render.githubusercontent.com/render/math?math=X_{[1:4]} \in \mathbb{R}^{4 \times d}"> là ma trận với các vector đặc trưng <img src="https://render.githubusercontent.com/render/math?math=x_1,x_2,x_3,x_4"> xếp theo hàng dọc.
 
-行列W∈Rd×L
-は単層ニューラルネットワークの重み行列で，ここではランダムな値で初期化すればよい（問題73以降で学習して求める）．なお，y^1∈NLは未学習の行列Wで事例x1を分類したときに，各カテゴリに属する確率を表すベクトルである． 同様に，Y^∈Nn×Lは，学習データの事例x1,x2,x3,x4について，各カテゴリに属する確率を行列として表現している．
+<img src="./figs/fig06.png" width="250"/>
+
+Ma trận <img src="https://render.githubusercontent.com/render/math?math=W \in \mathbb{R}^{d \times L}"> là ma trận trọng số của mạng neural 1 tầng ẩn, ở đây bạn có thể khởi tạo ngẫu nhiên giá trị của ma trận (từ bài 73 trở đi chúng ta sẽ học ma trận trọng số này). Ngoài ra, <img src="https://render.githubusercontent.com/render/math?math=\hat{y}_1 \in \mathbb{N}^L"> là vector biểu diễn xác suất example <img src="https://render.githubusercontent.com/render/math?math=x_1"> thuộc về các lớp khi dùng ma trận chưa được học <img src="https://render.githubusercontent.com/render/math?math=W"> để phân loại. Tương tự, <img src="https://render.githubusercontent.com/render/math?math=\hat{Y} \in \mathbb{N}^{n \times L}"> là ma trận biểu diễn xác xuất các example <img src="https://render.githubusercontent.com/render/math?math=x_1,x_2,x_3,x_4"> thuộc về các lớp.
 
 ### 72. Tính loss và gradient
 
