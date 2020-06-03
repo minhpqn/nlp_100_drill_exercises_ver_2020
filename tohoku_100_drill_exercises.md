@@ -538,7 +538,7 @@ Dựa vào phương pháp ở trên, hãy tạo các ma trận - vector dưới 
 
 Ở đây, softmax là kí hiệu của hàm softmax, <img src="https://render.githubusercontent.com/render/math?math=X_{[1:4]} \in \mathbb{R}^{4 \times d}"> là ma trận với các vector đặc trưng <img src="https://render.githubusercontent.com/render/math?math=x_1,x_2,x_3,x_4"> xếp theo hàng dọc.
 
-<img src="./figs/fig06.png" width="250"/>
+<img src="./figs/fig06.png" width="150"/>
 
 Ma trận <img src="https://render.githubusercontent.com/render/math?math=W \in \mathbb{R}^{d \times L}"> là ma trận trọng số của mạng neural 1 tầng ẩn, ở đây bạn có thể khởi tạo ngẫu nhiên giá trị của ma trận (từ bài 73 trở đi chúng ta sẽ học ma trận trọng số này). Ngoài ra, <img src="https://render.githubusercontent.com/render/math?math=\hat{y}_1 \in \mathbb{N}^L"> là vector biểu diễn xác suất example <img src="https://render.githubusercontent.com/render/math?math=x_1"> thuộc về các lớp khi dùng ma trận chưa được học <img src="https://render.githubusercontent.com/render/math?math=W"> để phân loại. Tương tự, <img src="https://render.githubusercontent.com/render/math?math=\hat{Y} \in \mathbb{N}^{n \times L}"> là ma trận biểu diễn xác xuất các example <img src="https://render.githubusercontent.com/render/math?math=x_1,x_2,x_3,x_4"> thuộc về các lớp.
 
@@ -595,6 +595,14 @@ Sửa code của bài 82, hãy tính toán giá trị hàm loss, gradient cho m�
 ### 84. Áp dụng word embedding
 
 Hãy khởi tạo word embedding <img src="https://render.githubusercontent.com/render/math?math=emb(x)"> bằng pre-trained word vector (chẳng hạn bộ [pre-trained word vector](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing) được huấn luyện trên tập dữ liệu Google News (khoảng 100 tỉ từ)) và huấn luyện mạng neural.
+
+### 85. Bidirection RNN - Mạng RNN nhiều tầng
+
+Sử dụng forward RNN và backward RNN để encode text đầu vào và học mô hình.
+
+<img src="./figs/fig07.png" width="400"/>
+
+Ở đây, <img src="https://render.githubusercontent.com/render/math?math=\overrightarrow{h}_t \in \mathbb{R}^{d_h}, \overleftarrow{h}_t \in \mathbb{R}^{d_h}"> lần lượt là các hidden state vector ở time step *t*, sinh ra bởi forward và backward RNN, <img src="https://render.githubusercontent.com/render/math?math=\overleftarrow{RNN}(x,h)"> là RNN unit để tính toán hidden state trước đó từ đầu vào *x* và hidden state *h* ở time step kế tiếp, <img src="https://render.githubusercontent.com/render/math?math=W^{(yh)} \in \mathbb{R}^{L \times 2d_h}"> là ma trận dự đoán các category từ hidden state vector, <img src="https://render.githubusercontent.com/render/math?math=b^{(y)} \in \mathbb{R}^{L}"> là bias term. Ngoài ra kí hiệu [a; b] biểu diễn vector tạo thành bằng cách concat các vector a và b.
 
 ### 87. Huấn luyện mô hình CNN bằng thuật toán Stochastic Gradient Descent
 
