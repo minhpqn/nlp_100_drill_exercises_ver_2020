@@ -627,8 +627,6 @@ Sử dụng forward RNN và backward RNN để encode text đầu vào và học
 
 Ở đây, <img src="https://render.githubusercontent.com/render/math?math=\overrightarrow{h}_t \in \mathbb{R}^{d_h}, \overleftarrow{h}_t \in \mathbb{R}^{d_h}"> lần lượt là các hidden state vector ở time step *t*, sinh ra bởi forward và backward RNN, <img src="https://render.githubusercontent.com/render/math?math=\overleftarrow{RNN}(x,h)"> là RNN unit để tính toán hidden state trước đó từ đầu vào *x* và hidden state *h* ở time step kế tiếp, <img src="https://render.githubusercontent.com/render/math?math=W^{(yh)} \in \mathbb{R}^{L \times 2d_h}"> là ma trận dự đoán các category từ hidden state vector, <img src="https://render.githubusercontent.com/render/math?math=b^{(y)} \in \mathbb{R}^{L}"> là bias term. Ngoài ra kí hiệu [a; b] biểu diễn vector tạo thành bằng cách concat các vector a và b.
 
-86. 畳み込みニューラルネットワーク (CNN)
-
 ### 86. Mạng neural tích chập (CNN)
 
 Cho trước chuỗi các từ được biểu diễn bằng các số ID <img src="https://render.githubusercontent.com/render/math?math=\boldsymbol{x} = (x_1, x_2, \dots, x_T)">. Ở đây, *T* là độ dài của chuỗi từ, <img src="https://render.githubusercontent.com/render/math?math=x_t \in \mathbb{R}^{V}"> là biểu diễn dạng one-hot của số ID của từ (*V* là số lượng các từ). Sử dụng mạng neural tích chập (CNN: Convolutional Neural Network), cài đặt mô hình dự đoán nhãn *y* từ chuỗi các từ *x*.
@@ -642,9 +640,21 @@ Thêm nữa, cấu trúc mạng CNN được cho như ở dưới đây.
 - Số chiều của vector của các time step sau convolution operator: <img src="https://render.githubusercontent.com/render/math?math=d_h">
 - Sử dụng max pooling sau convolution layer, biểu diễn câu đầu vào bằng hidden state vector với số chiều <img src="https://render.githubusercontent.com/render/math?math=d_h">
 
-Tức là, vector đặc trưng <img src="https://render.githubusercontent.com/render/math?math=p_t \in \mathbb{R}^{d_h}"> tại time step *t* được tính bằng công thức sau.
+Vector đặc trưng <img src="https://render.githubusercontent.com/render/math?math=p_t \in \mathbb{R}^{d_h}"> tại time step *t* được tính bằng công thức sau.
 
 <img src="./figs/fig08.png" width="400"/>
+
+Ở đây, <img src="https://render.githubusercontent.com/render/math?math=W^{(px)} \in \mathbb{R}^{d_h \times 3d_w}, b^{(p)} \in \mathbb{R}^{d_h}"> là tham số của mạng CNN, *g* là hàm activation (chẳng hạn như hàm tanh hay ReLU), [a;b;c] là vector tạo thành bằng cách concat các vector a, b, c. Ngoài ra, lý do số cột của ma trận <img src="https://render.githubusercontent.com/render/math?math=W^{(px)}"> là <img src="https://render.githubusercontent.com/render/math?math=3d_w"> là ma trận đó dùng để thực hiện biến đổi tuyến tính trên vector được tạo thành bằng cách concate word embedding vector của 3 token.
+
+Max pooling lấy ra giá trị lớn nhất trên toàn bộ time step cho mỗi chiều của vector đặc trưng và tính ra vector <img src="https://render.githubusercontent.com/render/math?math=c \in \mathbb{R}^{d_h}"> biểu diễn text đầu vào. Nếu biểu diễn giá trị ở vị trí thứ *i* của *c* bằng *c*[*i*] thì Max Pooling được biểu diễn bằng công thức sau đây.
+
+<img src="./figs/fig09.png" width="150"/>
+
+Cuối cùng, áp dụng biến đổi tuyến tính bằng ma trận <img src="https://render.githubusercontent.com/render/math?math=W^{(yc)} \in \mathbb{R}^{L \times d_h}"> và số hạng bias <img src="https://render.githubusercontent.com/render/math?math=b^{(y)} \in \mathbb{R}^{L}">, sau đó là áp dụng hàm softmax trên vector đặc trưng *c* của text đầu vào để dự đoán nhãn *y*.
+
+<img src="./figs/fig10.png" width="250"/>
+
+Chú ý rằng, trong bài tập này, chúng ta không học mô hình mà chỉ cần tính toán *y* bằng ma trận trọng số được khởi tạo ngẫu nhiên.
 
 ### 87. Huấn luyện mô hình CNN bằng thuật toán Stochastic Gradient Descent
 
