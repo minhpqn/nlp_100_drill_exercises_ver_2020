@@ -607,6 +607,20 @@ Cải biến code của bài tập 78, hãy thay đổi kiến trúc của mạn
 
 Chúng ta muốn gán cho mỗi từ trong dữ liệu huấn luyện chúng ta đã tạo ra trong bài tập 51 một số ID duy nhất. Hãy gán số ID cho các từ xuất hiện 2 lần trở lên trong dữ liệu huấn luyện bằng phương pháp: từ xuất hiện nhiều nhất được gán ID bằng 1, từ xuất hiện nhiều thứ 2 được gán ID bằng 2,... Sau đó, hãy cài đặt hàm trả về một dãy các ID cho một chuỗi các từ cho trước. Ngoài ra, tất cả các từ có tần suất xuất hiện ít hơn 2 (trong dữ liệu train) được gán ID bằng 0.
 
+### 81. Dự đoán bằng mô hình RNN
+
+Cho trước một chuỗi từ <img src="https://render.githubusercontent.com/render/math?math=\boldsymbol{x} = (x_1, x_2, \dots, x_T)"> được biểu diễn bằng các số ID. Trong đó, *T* là độ dài của chuỗi từ, <img src="https://render.githubusercontent.com/render/math?math=x_t \in \mathbb{R}^{V}"> là biểu diễn one-hot của ID tương ứng với từ (*V* là tổng số từ). Cài đặt phương trình sau đây dưới dạng mô hình dự đoán nhãn *y* từ chuỗi từ *x*, sử dụng mạng neural hồi quy (RNN: Recurrent Neural Network).
+
+<img src="./figs/fig11.png" width="350"/>
+
+Trong đó <img src="https://render.githubusercontent.com/render/math?math=\mathrm{emb}(x) \in \mathbb{R}^{d_w}"> là kí hiệu của word embedding (hàm số biến đổi biểu diễn dạng one-hot của từ thành word vector), <img src="https://render.githubusercontent.com/render/math?math=\overrightarrow{h}_t \in \mathbb{R}^{d_h}"> là vector của hidden state tại time step *t*, <img src="https://render.githubusercontent.com/render/math?math=\overrightarrow{RNN}(x,h)"> là RNN unit để tính toán hidden state tiếp theo từ đầu vào *x* và hidden state tại time step trước, <img src="https://render.githubusercontent.com/render/math?math=W^{(yh)} \in \mathbb{R}^{L \times d_h}"> là ma trận để dự đoán nhãn từ vector của hidden state, <img src="https://render.githubusercontent.com/render/math?math=b^{(y)} \in \mathbb{R}^{L}"> là bias term (<img src="https://render.githubusercontent.com/render/math?math=d_w, d_h, L"> lần lượt là số chiều của word embedding, số chiều của hidden state và số lượng nhãn). Có rất nhiều kiến trúc khác nhau trong RNN unit <img src="https://render.githubusercontent.com/render/math?math=\overrightarrow{RNN}(x,h)"> và dưới đây là một mô hình cổ điển.
+
+<img src="./figs/fig12.png" width="350"/>
+
+Trong đó, <img src="https://render.githubusercontent.com/render/math?math=W^{(hx)} \in \mathbb{R}^{d_h \times d_w}">，<img src="https://render.githubusercontent.com/render/math?math=W^{(hh)} \in \mathbb{R}^{d_h \times d_h}">, <img src="https://render.githubusercontent.com/render/math?math=b^{(h)} \in \mathbb{R}^{d_h}"> là tham số của RNN unit, *g* là hàm activation (chẳng hạn hàm tanh hay ReLU).
+
+Chú ý rằng, trong bài tập này, chúng ta không huấn luyện các tham số mà nhãn *y* có thể được dự đoán bằng các tham số được khởi tạo ngẫu nhiên. Hãy chọn các giá trị phù hợp cho các hyperparameter như số chiều, ví dụ: <img src="https://render.githubusercontent.com/render/math?math=d_w=300">, <img src="https://render.githubusercontent.com/render/math?math=d_h=50"> (trong các bài tiếp theo chúng ta sẽ dùng cùng  các hyperparameter đã thiết lập).
+
 ### 82. Huấn luyện bằng thuật toán Stochastic Gradient Descent
 
 Sử dụng thuật toán SGD (Stochastic Gradient Descent), hãy huấn luyện mô hình đã tạo ra ở bài 81. Huấn luyện mô hình, đồng thời hiển thị giá trị của hàm loss và độ chính xác trên tập huấn luyện và tập test. Hãy kết thúc giải thuật với tiêu chuẩn thích hợp (ví dụ sau 10 epochs).
