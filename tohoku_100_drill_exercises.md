@@ -681,7 +681,7 @@ Sử dụng mô hình dịch máy neural đã học ở bài tập 91, cài đ�
 
 ### 94. Beam Search
 
-Trong bước decode câu dịch bằng mô hình dịch máy neural đã học ở bài 91, hãy sử dụng thuật toán beam search. Thay đổi beam size từ 1 đến 100 và vẽ dodoff thị thể hiện sự biến đổi của BLEU score trên tập dev.
+Trong bước decode câu dịch bằng mô hình dịch máy neural đã học ở bài 91, hãy sử dụng thuật toán beam search. Thay đổi beam size từ 1 đến 100 và vẽ đồ thị thể hiện sự biến đổi của BLEU score trên tập dev.
 
 ### 95. Sử dụng subword
 
