@@ -59,7 +59,7 @@ Viết hàm sinh ra tất cả các n-gram từ một dãy cho trước (xâu k�
 
 ### 07. Sinh ra câu từ template
 
-Viết hàm số nhận vào 3 biến x, y, z và trả về xâu ký tự "{y} vào lúc {x} giờ là {z}", trong đó {x}, {y} và {z} thể hiện giáo trị của x, y, z.
+Viết hàm số nhận vào 3 biến x, y, z và trả về xâu ký tự "{y} vào lúc {x} giờ là {z}", trong đó {x}, {y} và {z} thể hiện giá trị của x, y, z.
 Sinh ra kết quả với các giá trị x, y, z sau đây x="12" y="Nhiệt độ" z=22.4
 
 ### 08. Xâu mật mã
